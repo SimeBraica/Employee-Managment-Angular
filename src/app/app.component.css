@@ -1,0 +1,38 @@
+app-navbar{
+  display: var(--navigation);
+  z-index: 1;
+  position: relative; 
+}
+
+.header-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(63, 0, 238);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  z-index: 300;
+  position: relative; 
+}
+button{
+  margin-right: 20px;
+}
+h1{
+  color: white;
+  margin-left: 15px;
+}
+
+#btnMenu {
+  background-color: transparent;
+  border: transparent;
+  background-image: url('../assets/icons/menu.png');
+  width: 30px;
+  height: 30px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  cursor: pointer;
+}
+
+
+

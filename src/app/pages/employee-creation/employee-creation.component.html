@@ -1,0 +1,28 @@
+<div class="employee-management">
+    <h2>Create Employee</h2>
+    
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName" name="lastName" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" [(ngModel)]="dateOfBirth" name="dateOfBirth" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="employeeDropdown">Job Title:</label>
+        <app-job-dropdown [employees]="employees" (selectedJobTitleEmmiter)="getSelectedJobTitle($event)"></app-job-dropdown>
+      </div>
+      
+      <button type="submit">Create Employee</button>
+    </form>
+  </div>
+  

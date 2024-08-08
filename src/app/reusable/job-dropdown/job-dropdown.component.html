@@ -1,0 +1,4 @@
+<select id="employeeDropdown" [(ngModel)]="selectedJobTitle" name="selectedJobTitle" (change)="sendSelectedJobTitle()">
+    <option value="" disabled>Select Job Title</option> 
+    <option *ngFor="let jobTitle of jobTitles" [value]="jobTitle">{{ jobTitle }}</option>
+  </select>

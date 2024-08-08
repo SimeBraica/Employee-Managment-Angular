@@ -1,0 +1,72 @@
+.employee-management {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"] {
+  width: 98.7%; 
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+#pagination {
+  color: #5a5a5a;
+  margin-right: 10px; 
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.employee-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.employee-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.employee-table tr:hover {
+  background-color: #d2d9fd;
+}
+
+.employee-table td {
+  color: #5a5a5a;
+}
+
+@media screen and (max-width: 768px) {
+  .employee-table th:nth-child(3),
+  .employee-table td:nth-child(3),
+  .employee-table th:nth-child(4),
+  .employee-table td:nth-child(4) {
+    display: none; 
+  }
+}

@@ -1,0 +1,46 @@
+<div class="employee-management">
+    <div class="form-group">
+      <label for="employeeDropdown">Filter by Job Title:</label>
+      <app-job-dropdown [employees]="employees" (selectedJobTitleEmmiter)="getSelectedJobTitle($event)"></app-job-dropdown>
+    </div>
+    <div class="form-group">
+      <app-search-filter [employees]="employees" (filteredEmployeesEmitter)="getFilteredEmployees($event)"></app-search-filter>
+    </div>
+    <div class="form-group">
+      <app-sorting
+        [sortingCriteria]="sortingCriteria"
+        [employees]="employees"
+        (sortedEmployeesEmmiter)="getSortedEmployees($event)"
+      ></app-sorting>
+    </div>
+
+    <button (click)="resetTable()">Reset</button>
+
+    <div class="form-group">
+      <app-pagination
+      [currentPage]="currentPage"
+      [itemsPerPage]="itemsPerPage"
+      [totalItems]="totalItems"
+      (pageChanged)="onPageChange($event)"
+    ></app-pagination>    
+    </div>
+
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date of Birth</th>
+        <th>Job Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of filteredEmployees">
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.dateOfBirth }}</td>
+        <td>{{ employee.jobTitle }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,9 @@
+<label>Sort by:</label>
+<div class="sort-controls">
+    <select id="sortEmployees" [(ngModel)]="sortCriterion" name="sortCriterion">
+        <option value="" disabled>Select a sort criterion</option> 
+        <option *ngFor="let sorting of sortingCriteria" [value]="sorting">By {{sorting}}</option>
+    </select>
+    <button (click)="sortAsc()">Asc</button>
+    <button (click)="sortDesc()">Desc</button>
+</div>
