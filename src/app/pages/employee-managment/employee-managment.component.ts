@@ -25,6 +25,7 @@ export class EmployeeManagmentComponent {
 
   ngOnInit() {
     this.fetchEmployees();
+    this.getAllSortingCriteria();
   }
 
   fetchEmployees() {
@@ -32,7 +33,6 @@ export class EmployeeManagmentComponent {
       this.employees = response.data;
       this.filteredEmployees = [...this.employees]; 
       this.totalItems = this.filteredEmployees.length;
-      this.getAllSortingCriteria();
       this.updatePaginatedEmployees();
     });
   }
